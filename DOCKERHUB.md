@@ -16,7 +16,7 @@ docker run -d \
   --name flask-mdict \
   -p 5248:5248 \
   -v ./library:/app/content \
-  nxxxsooo/docker-flask-mdict:latest
+  tardivo/flask-mdict:latest
 ```
 
 ## Configuration
@@ -36,7 +36,7 @@ To use a custom `flask_mdict.json`, map a volume to `/config` and override the c
 version: '3.8'
 services:
   flask-mdict:
-    image: nxxxsooo/docker-flask-mdict:latest
+    image: tardivo/flask-mdict:latest
     ports:
       - "5248:5248"
     volumes:
