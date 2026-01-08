@@ -4,10 +4,6 @@
 content/*
 # Re-include the source directory structure
 !content/source/
-# Ignore all dictionaries inside source (default behavior)
-content/source/*
-# Explicitly Whitelist the Oxford Dictionary 10th
-!content/source/Oxford_Advanced_Learners_Dictionary_10th/
 
 sound/
 
