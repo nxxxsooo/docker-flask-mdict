@@ -9,6 +9,7 @@ import logging
 from flask import Flask, redirect, url_for, g
 
 from flask_mdict import __version__, init_app
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 
 logger = logging.getLogger(__name__)
@@ -20,6 +21,9 @@ def create_app(config=None):
         format='%(message)s',
     )
     app = Flask(__name__, template_folder=None, static_folder=None)
+    # Apply ProxyFix to handle X-Forwarded-Proto headers from reverse proxy
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
     # csrf 永久有效
     app.config['WTF_CSRF_TIME_LIMIT'] = None
     app.config['MDICT_DIR'] = os.path.realpath('content')
