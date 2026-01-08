@@ -14,8 +14,10 @@ RUN sed -i '/translators/d' requirements.txt
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Create content directory for persistent data
+# Create content directory and copy source dictionaries (if any)
 RUN mkdir -p content
+COPY content/source /app/content
+
 
 # Expose the default port
 EXPOSE 5248
