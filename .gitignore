@@ -1,10 +1,8 @@
-# Ignore all subdirectories in content/source (dictionaries)
-content/source/*/
-
+# Ignore all dictionaries inside source
+content/source/*
+# Keep the directory structure
+!content/source/.gitkeep
 sound/
-
-
-
 __pycache__/
 *.pyc
 .DS_Store
