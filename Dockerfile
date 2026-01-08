@@ -3,7 +3,7 @@ FROM python:3.11-alpine
 WORKDIR /app
 
 # Copy the source code from the 'flask-mdict-source' directory
-COPY flask-mdict-source /app
+COPY flask-mdict /app
 
 # Remove all plugin files except __init__.py
 RUN rm -f flask_mdict/plugins/[!__]*.py

@@ -8,7 +8,7 @@ try:
     from readmdict import MDX
 except ImportError as e:
     print(f"Error importing MDX: {e}")
-    print("Please make sure 'flask-mdict-source' is present in the parent directory.")
+    print("Please make sure 'flask-mdict' is present in the parent directory.")
     sys.exit(1)
 
 TITLE_MAPPING = {

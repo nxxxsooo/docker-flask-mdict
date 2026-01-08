@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: liuyug/flask-mdict
-          path: flask-mdict-source
+          path: flask-mdict
           
       # 2. Set up Docker Buildx
       - name: Set up QEMU
