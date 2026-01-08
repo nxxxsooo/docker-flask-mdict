@@ -17,6 +17,40 @@ The workflow is defined in `.github/workflows/build.yml`.
 4. Push the image to `tardivo/flask-mdict:latest`.
 5. Supports multi-architecture builds (`linux/amd64`, `linux/arm64`).
 
+## Running (Cross-Platform)
+
+### 1. Docker Compose (Recommended)
+Works automatically on Windows, Mac, and Linux.
+```yaml
+volumes:
+  - ./library:/app/content
+```
+
+### 2. Command Line
+**PowerShell (Windows):**
+```powershell
+docker run -d `
+  -v ${PWD}/library:/app/content `
+  -p 5248:5248 `
+  tardivo/flask-mdict:latest
+```
+
+**Command Prompt (Windows CMD):**
+```cmd
+docker run -d ^
+  -v %cd%\library:/app/content ^
+  -p 5248:5248 ^
+  tardivo/flask-mdict:latest
+```
+
+**Bash (Mac/Linux):**
+```bash
+docker run -d \
+  -v $(pwd)/library:/app/content \
+  -p 5248:5248 \
+  tardivo/flask-mdict:latest
+```
+
 ## Configuration
 
 To use this workflow, ensuring the following **Secrets** are set in your repository (or Environment):

@@ -19,6 +19,24 @@ docker run -d \
   tardivo/flask-mdict:latest
 ```
 
+**Windows (PowerShell):**
+```powershell
+docker run -d `
+  --name flask-mdict `
+  -p 5248:5248 `
+  -v ${PWD}/library:/app/content `
+  tardivo/flask-mdict:latest
+```
+
+**Windows (CMD):**
+```cmd
+docker run -d ^
+  --name flask-mdict ^
+  -p 5248:5248 ^
+  -v %cd%\library:/app/content ^
+  tardivo/flask-mdict:latest
+```
+
 ## Configuration
 
 ### Volumes
