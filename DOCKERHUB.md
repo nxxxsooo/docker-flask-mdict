@@ -79,7 +79,7 @@ To build the image locally with your own modifications:
 This version includes several critical fixes and enhancements not present in the original:
 
 1.  **Reverse Proxy Support**: Added `ProxyFix` middleware to correctly handle `X-Forwarded-Proto` headers. Sites behind Nginx/Traefik will now load CSS/assets correctly via HTTPS.
-2.  **LZO Compression Support**: Fixed issues with identifying and handling LZO-compressed MDX files.
+2.  **LZO Compression Support**: Native support for LZO-compressed MDX files. This resolves common "unknown compression type" or decoding errors ensuring a wider range of dictionaries (especially older or Chinese dictionaries) load correctly.
 3.  **Modernized Build**:
     -   Reduced image size by removing broken/unused translator plugins.
     -   Bind address set to `0.0.0.0` by default for Docker compatibility.
