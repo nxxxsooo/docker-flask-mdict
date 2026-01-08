@@ -73,7 +73,8 @@ To build the image locally with your own modifications:
 3.  Run `docker-compose up -d --build`.
 
 ## Recent Changes
--   **No Plugins**: Translator plugins are removed for a leaner image.
+-   **Lean Image**: Dictionaries are NOT baked in; you must mount them to `/app/content`.
+-   **No Plugins**: Translator plugins are removed for a smaller footprint.
 -   **Security**: Default bind address is `0.0.0.0` (Docker friendly).
 -   **Fixes**: Includes fixes for MDX decoding errors.
 
