@@ -11,6 +11,9 @@ A Dockerized version of [flask-mdict](https://github.com/liuyug/flask-mdict) wit
 *   **Persistence**: Keep your dictionaries and configuration safe across restarts.
 *   **Multi-Arch**: Supports `amd64` and `arm64`.
 
+> [!IMPORTANT]
+> **No dictionaries are included.** You must provide your own `.mdx` and `.mdd` files. Place them in a folder on your host machine (e.g., `./library`) and mount it to `/app/content`.
+
 ## Quick Start
 
 **Bash (Mac/Linux):**

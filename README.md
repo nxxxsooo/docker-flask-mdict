@@ -44,6 +44,9 @@ To use this workflow, ensuring the following **Secrets** are set in your reposit
 ### Option 1: Deploy from Docker Hub (Recommended)
 Best for most users. Uses the pre-built, lean image from Docker Hub.
 
+> [!IMPORTANT]
+> **No dictionaries are included.** You must provide your own `.mdx` and `.mdd` files. Place them in a folder on your host machine (e.g., `./library`) and mount it to `/app/content`.
+
 **Using Docker Compose:**
 1.  Create `docker-compose.yml`:
     ```yaml
