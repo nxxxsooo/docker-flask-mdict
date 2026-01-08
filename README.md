@@ -1,0 +1,27 @@
+# Docker Flask Mdict Build
+
+This repository contains a GitHub Actions workflow to automatically build and push the Docker image for [flask-mdict](https://github.com/liuyug/flask-mdict).
+
+## Workflow
+
+The workflow is defined in `.github/workflows/build.yml`.
+
+**Triggers:**
+- **Schedule:** Runs daily at 2:00 AM UTC.
+- **Manual:** Can be triggered manually via the "Run workflow" button in the Actions tab.
+
+**Steps:**
+1. Check out the upstream repository (`liuyug/flask-mdict`).
+2. Log in to Docker Hub using GitHub Secrets.
+3. Build the Docker image from `upstream/Dockerfile`.
+4. Push the image to `tardivo/flask-mdict:latest`.
+5. Supports multi-architecture builds (`linux/amd64`, `linux/arm64`).
+
+## Configuration
+
+To use this workflow, ensuring the following **Secrets** are set in your repository (or Environment):
+
+- `DOCKERHUB_USERNAME`: Your Docker Hub username.
+- `DOCKERHUB_TOKEN`: Your Docker Hub Access Token.
+
+> **Note:** If you are using GitHub Environments to protect these secrets, ensure the `environment` key is set correctly in `build.yml`.

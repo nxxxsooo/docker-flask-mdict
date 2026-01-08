@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    # If your secrets are in a specific GitHub Environment (e.g., 'production'), uncomment the line below:
+    # environment: production
+    permissions:
+      contents: read
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
