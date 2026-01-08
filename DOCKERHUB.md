@@ -11,15 +11,16 @@ A Dockerized version of [flask-mdict](https://github.com/liuyug/flask-mdict), a 
 
 ## Quick Start
 
+**Bash (Mac/Linux):**
 ```bash
 docker run -d \
   --name flask-mdict \
   -p 5248:5248 \
-  -v ./library:/app/content \
+  -v $(pwd)/library:/app/content \
   tardivo/flask-mdict:latest
 ```
 
-**Windows (PowerShell):**
+**PowerShell (Windows):**
 ```powershell
 docker run -d `
   --name flask-mdict `
@@ -28,7 +29,7 @@ docker run -d `
   tardivo/flask-mdict:latest
 ```
 
-**Windows (CMD):**
+**Command Prompt (Windows CMD):**
 ```cmd
 docker run -d ^
   --name flask-mdict ^
