@@ -21,14 +21,14 @@ Self-hosted dictionary server that serves MDict (.mdx/.mdd) files over HTTP with
 - Landing page at mjshao.fun/mdict-live/
 
 ## Current Status
-- ✅ Running on Unraid (dict.mjshao.fun)
-- ✅ Server-side caching with LRU + optional Redis
-- ✅ Published on GitHub with badges
-- ✅ Landing page on portfolio
+- Dormant: the Unraid container and `dict.mjshao.fun` public endpoint are retired
+- Dictionary source data remains at `/mnt/user/media/Dicts/`
+- Server-side caching with LRU + optional Redis is implemented
+- Published source, container images, and portfolio landing page are retained
 
 ## Next Steps
-- Performance tuning for large dictionaries
-- Consider full-text search index
+- Revisit as an AI-assisted dictionary rather than restoring the old public reader as-is
+- Preserve the existing MDict corpus and parsing support as reusable inputs
 
 ## Resolved Issues
 - Added server-side caching to reduce repeated .mdx lookups
